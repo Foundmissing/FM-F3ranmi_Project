@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+//     const http = require("http")
+// const { setTimeout } = require("timers/promises")
+const bro = [
+    {
+        actual:"come home", title:"little boy"
+    },
+    {
+        actual:"come ", title:"little "
+    }
+]
+function createPost(post){
+setTimeout( function() {
+    bro.push(post)
+}, 5000);
+}
+function getPost() {
+    setTimeout( function() {
+        let output = ""
+        bro.forEach(function(post) {
+            output+=`<li>${post.title}</li>`
+        });
+        document.body.innerHTML = output;
+    }, 1000);
+}
+createPost({body:"wsald", title:"efjfjf"});
+getPost();
+</script>
+</html>
